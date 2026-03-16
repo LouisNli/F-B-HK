@@ -46,61 +46,61 @@
     <section id="brands" class="brands section">
       <div class="container">
         <div class="brands__grid">
-          <!-- Yue Garden -->
+          <!-- Jade Pavilion -->
           <article class="brand-card">
             <div class="brand-card__image">
-              <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600" alt="Yue Garden" />
+              <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600" alt="Jade Pavilion" />
             </div>
             <div class="brand-card__content">
               <h3 class="brand-card__title">
-                <span class="chinese-text">月園</span>
-                <span>Yue Garden</span>
+                <span class="chinese-text">翠庭軒</span>
+                <span>Jade Pavilion</span>
               </h3>
               <p class="brand-card__description">
                 Authentic Cantonese fine dining in an atmosphere of refined elegance.
                 Experience the pinnacle of traditional culinary arts.
               </p>
-              <router-link to="/yue-garden" class="brand-card__link">
+              <router-link to="/jade-pavilion" class="brand-card__link">
                 Discover More <span class="arrow">→</span>
               </router-link>
             </div>
           </article>
 
-          <!-- Harbour Bistro -->
+          <!-- Bay Bistro -->
           <article class="brand-card">
             <div class="brand-card__image">
-              <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=600" alt="Harbour Bistro" />
+              <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=600" alt="Bay Bistro" />
             </div>
             <div class="brand-card__content">
               <h3 class="brand-card__title">
-                <span class="chinese-text">海港小館</span>
-                <span>Harbour Bistro</span>
+                <span class="chinese-text">海灣餐廳</span>
+                <span>Bay Bistro</span>
               </h3>
               <p class="brand-card__description">
                 Where East meets West in a vibrant waterfront setting.
                 Creative fusion dishes with panoramic harbour views.
               </p>
-              <router-link to="/harbour-bistro" class="brand-card__link">
+              <router-link to="/bay-bistro" class="brand-card__link">
                 Discover More <span class="arrow">→</span>
               </router-link>
             </div>
           </article>
 
-          <!-- Teahouse 88 -->
+          <!-- Ming's Tea House -->
           <article class="brand-card">
             <div class="brand-card__image">
-              <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600" alt="Teahouse 88" />
+              <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600" alt="Ming's Tea House" />
             </div>
             <div class="brand-card__content">
               <h3 class="brand-card__title">
-                <span class="chinese-text">茶居八十八</span>
-                <span>Teahouse 88</span>
+                <span class="chinese-text">茗香閣</span>
+                <span>Ming's Tea House</span>
               </h3>
               <p class="brand-card__description">
                 A love letter to Hong Kong's iconic Cha Chaan Teng culture.
                 Nostalgic flavors in a comfortable, modern setting.
               </p>
-              <router-link to="/teahouse-88" class="brand-card__link">
+              <router-link to="/mings-tea-house" class="brand-card__link">
                 Discover More <span class="arrow">→</span>
               </router-link>
             </div>

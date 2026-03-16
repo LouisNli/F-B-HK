@@ -24,9 +24,9 @@
             <el-icon><Shop /></el-icon>
             <span>Brands</span>
           </template>
-          <el-menu-item index="/brands/yue-garden">Yue Garden</el-menu-item>
-          <el-menu-item index="/brands/harbour-bistro">Harbour Bistro</el-menu-item>
-          <el-menu-item index="/brands/teahouse-88">Teahouse 88</el-menu-item>
+          <el-menu-item index="/brands/jade-pavilion">Jade Pavilion</el-menu-item>
+          <el-menu-item index="/brands/bay-bistro">Bay Bistro</el-menu-item>
+          <el-menu-item index="/brands/mings-tea-house">Ming's Tea House</el-menu-item>
         </el-sub-menu>
       </el-menu>
     </el-aside>

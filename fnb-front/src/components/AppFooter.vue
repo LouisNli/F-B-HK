@@ -14,18 +14,18 @@
           <h4 class="footer__title">Our Brands</h4>
           <ul class="footer__links">
             <li>
-              <router-link to="/yue-garden">
-                <span class="chinese-text">月園</span> Yue Garden
+              <router-link to="/jade-pavilion">
+                <span class="chinese-text">翠庭軒</span> Jade Pavilion
               </router-link>
             </li>
             <li>
-              <router-link to="/harbour-bistro">
-                <span class="chinese-text">海港小館</span> Harbour Bistro
+              <router-link to="/bay-bistro">
+                <span class="chinese-text">海灣餐廳</span> Bay Bistro
               </router-link>
             </li>
             <li>
-              <router-link to="/teahouse-88">
-                <span class="chinese-text">茶居八十八</span> Teahouse 88
+              <router-link to="/mings-tea-house">
+                <span class="chinese-text">茗香閣</span> Ming's Tea House
               </router-link>
             </li>
           </ul>

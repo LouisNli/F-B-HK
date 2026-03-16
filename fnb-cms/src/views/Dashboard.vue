@@ -12,16 +12,16 @@
         </el-card>
       </el-col>
       <el-col :span="8">
-        <el-card shadow="hover" class="card" @click="$router.push('/brands/yue-garden')">
+        <el-card shadow="hover" class="card" @click="$router.push('/brands/jade-pavilion')">
           <el-icon :size="40"><Shop /></el-icon>
-          <h3>Yue Garden</h3>
+          <h3>Jade Pavilion</h3>
           <p>Manage content, dishes, and gallery</p>
         </el-card>
       </el-col>
       <el-col :span="8">
-        <el-card shadow="hover" class="card" @click="$router.push('/brands/harbour-bistro')">
+        <el-card shadow="hover" class="card" @click="$router.push('/brands/bay-bistro')">
           <el-icon :size="40"><Ship /></el-icon>
-          <h3>Harbour Bistro</h3>
+          <h3>Bay Bistro</h3>
           <p>Manage content, dishes, and gallery</p>
         </el-card>
       </el-col>
@@ -29,9 +29,9 @@
     
     <el-row :gutter="20" class="cards">
       <el-col :span="8">
-        <el-card shadow="hover" class="card" @click="$router.push('/brands/teahouse-88')">
+        <el-card shadow="hover" class="card" @click="$router.push('/brands/mings-tea-house')">
           <el-icon :size="40"><Coffee /></el-icon>
-          <h3>Teahouse 88</h3>
+          <h3>Ming's Tea House</h3>
           <p>Manage content, dishes, and gallery</p>
         </el-card>
       </el-col>

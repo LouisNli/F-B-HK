@@ -22,31 +22,31 @@ module.exports = {
     // Seed brands
     await queryInterface.bulkInsert('brands', [
       {
-        slug: 'yue-garden',
-        name: 'Yue Garden',
-        chinese_name: '月園',
+        slug: 'jade-pavilion',
+        name: 'Jade Pavilion',
+        chinese_name: '翠庭軒',
         tagline: 'AUTHENTIC CANTONESE FINE DINING',
         hero_image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1920',
-        concept_paragraph_1: '月園 (Yue Garden) represents the pinnacle of traditional Cantonese culinary arts, situated in an atmosphere of refined modern elegance.',
+        concept_paragraph_1: '翠庭軒 (Jade Pavilion) represents the pinnacle of traditional Cantonese culinary arts, situated in an atmosphere of refined modern elegance.',
         concept_paragraph_2: 'Our master chefs bring decades of experience to craft exquisite dim sum, premium seafood, and classic Hong Kong delicacies, using only the finest seasonal ingredients sourced both locally and globally.',
-        concept_paragraph_3: 'Whether it\'s an intimate family gathering or a grand celebration, Yue Garden offers an unforgettable dining experience that honors our rich heritage.',
+        concept_paragraph_3: 'Whether it\'s an intimate family gathering or a grand celebration, Jade Pavilion offers an unforgettable dining experience that honors our rich heritage.',
         card_image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600',
         card_description: 'Authentic Cantonese fine dining in an atmosphere of refined elegance. Experience the pinnacle of traditional culinary arts.',
-        address: 'Level 5, The Peninsula Tower, Tsim Sha Tsui, Hong Kong',
+        address: 'Level 5, Premium Tower, Tsim Sha Tsui, Hong Kong',
         opening_hours: 'Daily: 11:30 AM - 3:00 PM, 6:00 PM - 10:30 PM',
         phone: '+852 2888 9999',
         created_at: new Date(),
         updated_at: new Date()
       },
       {
-        slug: 'harbour-bistro',
-        name: 'Harbour Bistro',
-        chinese_name: '海港小館',
+        slug: 'bay-bistro',
+        name: 'Bay Bistro',
+        chinese_name: '海灣餐廳',
         tagline: 'CONTEMPORARY FUSION WITH A VIEW',
         hero_image: 'https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=1920',
-        concept_paragraph_1: '海港小館 (Harbour Bistro) is where culinary creativity meets breathtaking waterfront scenery.',
+        concept_paragraph_1: '海灣餐廳 (Bay Bistro) is where culinary creativity meets breathtaking waterfront scenery.',
         concept_paragraph_2: 'Our innovative menu blends Eastern and Western flavors, featuring fresh seasonal ingredients prepared with modern techniques while respecting traditional roots.',
-        concept_paragraph_3: 'With panoramic harbour views and a relaxed yet sophisticated atmosphere, Harbour Bistro is perfect for business lunches, romantic dinners, or celebrations with friends.',
+        concept_paragraph_3: 'With panoramic harbour views and a relaxed yet sophisticated atmosphere, Bay Bistro is perfect for business lunches, romantic dinners, or celebrations with friends.',
         card_image: 'https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=600',
         card_description: 'Where East meets West in a vibrant waterfront setting. Creative fusion dishes with panoramic harbour views.',
         address: 'G/F, Harbour City, Tsim Sha Tsui, Hong Kong',
@@ -56,14 +56,14 @@ module.exports = {
         updated_at: new Date()
       },
       {
-        slug: 'teahouse-88',
-        name: 'Teahouse 88',
-        chinese_name: '茶居八十八',
+        slug: 'mings-tea-house',
+        name: 'Ming\'s Tea House',
+        chinese_name: '茗香閣',
         tagline: 'AUTHENTIC CHA CHAAN TENG CULTURE',
         hero_image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920',
-        concept_paragraph_1: '茶居八十八 (Teahouse 88) is a heartfelt tribute to Hong Kong\'s beloved Cha Chaan Teng culture.',
+        concept_paragraph_1: '茗香閣 (Ming\'s Tea House) is a heartfelt tribute to Hong Kong\'s beloved Cha Chaan Teng culture.',
         concept_paragraph_2: 'We serve all the classics you know and love - silky milk tea, crispy pineapple buns, savory macaroni soup, and Hong Kong-style French toast - all prepared with the same care and quality as the neighborhood shops of yesteryear.',
-        concept_paragraph_3: 'Step into Teahouse 88 and experience the warmth and nostalgia of old Hong Kong in a comfortable, modern setting.',
+        concept_paragraph_3: 'Step into Ming\'s Tea House and experience the warmth and nostalgia of old Hong Kong in a comfortable, modern setting.',
         card_image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600',
         card_description: 'A love letter to Hong Kong\'s iconic Cha Chaan Teng culture. Nostalgic flavors in a comfortable, modern setting.',
         address: '88 Wellington Street, Central, Hong Kong',
@@ -82,53 +82,53 @@ module.exports = {
     const brandMap = {};
     brands.forEach(b => { brandMap[b.slug] = b.id; });
 
-    // Seed dishes for Yue Garden
+    // Seed dishes for Jade Pavilion
     await queryInterface.bulkInsert('dishes', [
-      { brand_id: brandMap['yue-garden'], name: 'Crystal Shrimp Dumplings', chinese_name: '水晶蝦餃', description: 'Delicate translucent wrappers filled with succulent prawns', image: 'https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=600', sort_order: 1, created_at: new Date(), updated_at: new Date() },
-      { brand_id: brandMap['yue-garden'], name: 'Char Siu Bao', chinese_name: '叉燒包', description: 'Fluffy steamed buns with honey-glazed barbecue pork', image: 'https://images.unsplash.com/photo-1563245372-f21724e3856d?w=600', sort_order: 2, created_at: new Date(), updated_at: new Date() },
-      { brand_id: brandMap['yue-garden'], name: 'Steamed Fish', chinese_name: '清蒸石斑', description: 'Fresh grouper steamed with ginger and spring onions', image: 'https://images.unsplash.com/photo-1534604973900-c43ab4c2e0ab?w=600', sort_order: 3, created_at: new Date(), updated_at: new Date() },
-      { brand_id: brandMap['yue-garden'], name: 'Egg Tarts', chinese_name: '蛋撻', description: 'Flaky pastry shells with silky smooth custard filling', image: 'https://images.unsplash.com/photo-1530610476181-d83430b64dcd?w=600', sort_order: 4, created_at: new Date(), updated_at: new Date() }
+      { brand_id: brandMap['jade-pavilion'], name: 'Crystal Shrimp Dumplings', chinese_name: '水晶蝦餃', description: 'Delicate translucent wrappers filled with succulent prawns', image: 'https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=600', sort_order: 1, created_at: new Date(), updated_at: new Date() },
+      { brand_id: brandMap['jade-pavilion'], name: 'Char Siu Bao', chinese_name: '叉燒包', description: 'Fluffy steamed buns with honey-glazed barbecue pork', image: 'https://images.unsplash.com/photo-1563245372-f21724e3856d?w=600', sort_order: 2, created_at: new Date(), updated_at: new Date() },
+      { brand_id: brandMap['jade-pavilion'], name: 'Steamed Fish', chinese_name: '清蒸石斑', description: 'Fresh grouper steamed with ginger and spring onions', image: 'https://images.unsplash.com/photo-1534604973900-c43ab4c2e0ab?w=600', sort_order: 3, created_at: new Date(), updated_at: new Date() },
+      { brand_id: brandMap['jade-pavilion'], name: 'Egg Tarts', chinese_name: '蛋撻', description: 'Flaky pastry shells with silky smooth custard filling', image: 'https://images.unsplash.com/photo-1530610476181-d83430b64dcd?w=600', sort_order: 4, created_at: new Date(), updated_at: new Date() }
     ]);
 
-    // Seed dishes for Harbour Bistro
+    // Seed dishes for Bay Bistro
     await queryInterface.bulkInsert('dishes', [
-      { brand_id: brandMap['harbour-bistro'], name: 'Wagyu Beef Tartare', chinese_name: '和牛他他', description: 'Premium wagyu with Asian-inspired seasonings', image: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=600', sort_order: 1, created_at: new Date(), updated_at: new Date() },
-      { brand_id: brandMap['harbour-bistro'], name: 'Lobster Thermidor', chinese_name: '焗龍蝦', description: 'Classic French preparation with a Hong Kong twist', image: 'https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600', sort_order: 2, created_at: new Date(), updated_at: new Date() },
-      { brand_id: brandMap['harbour-bistro'], name: 'Truffle Risotto', chinese_name: '松露意大利飯', description: 'Creamy arborio rice with black truffle shavings', image: 'https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=600', sort_order: 3, created_at: new Date(), updated_at: new Date() },
-      { brand_id: brandMap['harbour-bistro'], name: 'Matcha Lava Cake', chinese_name: '抹茶心太軟', description: 'Warm matcha cake with molten center', image: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=600', sort_order: 4, created_at: new Date(), updated_at: new Date() }
+      { brand_id: brandMap['bay-bistro'], name: 'Wagyu Beef Tartare', chinese_name: '和牛他他', description: 'Premium wagyu with Asian-inspired seasonings', image: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=600', sort_order: 1, created_at: new Date(), updated_at: new Date() },
+      { brand_id: brandMap['bay-bistro'], name: 'Lobster Thermidor', chinese_name: '焗龍蝦', description: 'Classic French preparation with a Hong Kong twist', image: 'https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600', sort_order: 2, created_at: new Date(), updated_at: new Date() },
+      { brand_id: brandMap['bay-bistro'], name: 'Truffle Risotto', chinese_name: '松露意大利飯', description: 'Creamy arborio rice with black truffle shavings', image: 'https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=600', sort_order: 3, created_at: new Date(), updated_at: new Date() },
+      { brand_id: brandMap['bay-bistro'], name: 'Matcha Lava Cake', chinese_name: '抹茶心太軟', description: 'Warm matcha cake with molten center', image: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=600', sort_order: 4, created_at: new Date(), updated_at: new Date() }
     ]);
 
-    // Seed dishes for Teahouse 88
+    // Seed dishes for Ming's Tea House
     await queryInterface.bulkInsert('dishes', [
-      { brand_id: brandMap['teahouse-88'], name: 'Silk Stocking Milk Tea', chinese_name: '絲襪奶茶', description: 'Rich and smooth Hong Kong-style milk tea', image: 'https://images.unsplash.com/photo-1558857563-b371033873b8?w=600', sort_order: 1, created_at: new Date(), updated_at: new Date() },
-      { brand_id: brandMap['teahouse-88'], name: 'Pineapple Bun with Butter', chinese_name: '菠蘿油', description: 'Crispy sweet top with cold butter slice', image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600', sort_order: 2, created_at: new Date(), updated_at: new Date() },
-      { brand_id: brandMap['teahouse-88'], name: 'Macaroni Soup', chinese_name: '火腿通粉', description: 'Comforting soup with ham and vegetables', image: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?w=600', sort_order: 3, created_at: new Date(), updated_at: new Date() },
-      { brand_id: brandMap['teahouse-88'], name: 'French Toast', chinese_name: '西多士', description: 'Deep-fried toast with peanut butter and condensed milk', image: 'https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=600', sort_order: 4, created_at: new Date(), updated_at: new Date() }
+      { brand_id: brandMap['mings-tea-house'], name: 'Silk Stocking Milk Tea', chinese_name: '絲襪奶茶', description: 'Rich and smooth Hong Kong-style milk tea', image: 'https://images.unsplash.com/photo-1558857563-b371033873b8?w=600', sort_order: 1, created_at: new Date(), updated_at: new Date() },
+      { brand_id: brandMap['mings-tea-house'], name: 'Pineapple Bun with Butter', chinese_name: '菠蘿油', description: 'Crispy sweet top with cold butter slice', image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600', sort_order: 2, created_at: new Date(), updated_at: new Date() },
+      { brand_id: brandMap['mings-tea-house'], name: 'Macaroni Soup', chinese_name: '火腿通粉', description: 'Comforting soup with ham and vegetables', image: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?w=600', sort_order: 3, created_at: new Date(), updated_at: new Date() },
+      { brand_id: brandMap['mings-tea-house'], name: 'French Toast', chinese_name: '西多士', description: 'Deep-fried toast with peanut butter and condensed milk', image: 'https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=600', sort_order: 4, created_at: new Date(), updated_at: new Date() }
     ]);
 
     // Seed gallery images for all brands
     const galleryImages = [
-      // Yue Garden
-      { brand_id: brandMap['yue-garden'], image_url: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600', alt_text: 'Yue Garden interior', sort_order: 1 },
-      { brand_id: brandMap['yue-garden'], image_url: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600', alt_text: 'Fine dining experience', sort_order: 2 },
-      { brand_id: brandMap['yue-garden'], image_url: 'https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=600', alt_text: 'Elegant table setting', sort_order: 3 },
-      { brand_id: brandMap['yue-garden'], image_url: 'https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=600', alt_text: 'Dim sum preparation', sort_order: 4 },
-      { brand_id: brandMap['yue-garden'], image_url: 'https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=600', alt_text: 'Chef at work', sort_order: 5 },
-      { brand_id: brandMap['yue-garden'], image_url: 'https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=600', alt_text: 'Fresh ingredients', sort_order: 6 },
-      // Harbour Bistro
-      { brand_id: brandMap['harbour-bistro'], image_url: 'https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=600', alt_text: 'Harbour view dining', sort_order: 1 },
-      { brand_id: brandMap['harbour-bistro'], image_url: 'https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=600', alt_text: 'Modern interior', sort_order: 2 },
-      { brand_id: brandMap['harbour-bistro'], image_url: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600', alt_text: 'Fusion dishes', sort_order: 3 },
-      { brand_id: brandMap['harbour-bistro'], image_url: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600', alt_text: 'Bar area', sort_order: 4 },
-      { brand_id: brandMap['harbour-bistro'], image_url: 'https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=600', alt_text: 'Kitchen action', sort_order: 5 },
-      { brand_id: brandMap['harbour-bistro'], image_url: 'https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=600', alt_text: 'Fresh seafood', sort_order: 6 },
-      // Teahouse 88
-      { brand_id: brandMap['teahouse-88'], image_url: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600', alt_text: 'Classic teahouse', sort_order: 1 },
-      { brand_id: brandMap['teahouse-88'], image_url: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600', alt_text: 'Cozy seating', sort_order: 2 },
-      { brand_id: brandMap['teahouse-88'], image_url: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600', alt_text: 'Milk tea preparation', sort_order: 3 },
-      { brand_id: brandMap['teahouse-88'], image_url: 'https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=600', alt_text: 'Nostalgic decor', sort_order: 4 },
-      { brand_id: brandMap['teahouse-88'], image_url: 'https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=600', alt_text: 'Local favorites', sort_order: 5 },
-      { brand_id: brandMap['teahouse-88'], image_url: 'https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=600', alt_text: 'Fresh bakes', sort_order: 6 }
+      // Jade Pavilion
+      { brand_id: brandMap['jade-pavilion'], image_url: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600', alt_text: 'Jade Pavilion interior', sort_order: 1 },
+      { brand_id: brandMap['jade-pavilion'], image_url: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600', alt_text: 'Fine dining experience', sort_order: 2 },
+      { brand_id: brandMap['jade-pavilion'], image_url: 'https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=600', alt_text: 'Elegant table setting', sort_order: 3 },
+      { brand_id: brandMap['jade-pavilion'], image_url: 'https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=600', alt_text: 'Dim sum preparation', sort_order: 4 },
+      { brand_id: brandMap['jade-pavilion'], image_url: 'https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=600', alt_text: 'Chef at work', sort_order: 5 },
+      { brand_id: brandMap['jade-pavilion'], image_url: 'https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=600', alt_text: 'Fresh ingredients', sort_order: 6 },
+      // Bay Bistro
+      { brand_id: brandMap['bay-bistro'], image_url: 'https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=600', alt_text: 'Harbour view dining', sort_order: 1 },
+      { brand_id: brandMap['bay-bistro'], image_url: 'https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=600', alt_text: 'Modern interior', sort_order: 2 },
+      { brand_id: brandMap['bay-bistro'], image_url: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600', alt_text: 'Fusion dishes', sort_order: 3 },
+      { brand_id: brandMap['bay-bistro'], image_url: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600', alt_text: 'Bar area', sort_order: 4 },
+      { brand_id: brandMap['bay-bistro'], image_url: 'https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=600', alt_text: 'Kitchen action', sort_order: 5 },
+      { brand_id: brandMap['bay-bistro'], image_url: 'https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=600', alt_text: 'Fresh seafood', sort_order: 6 },
+      // Ming's Tea House
+      { brand_id: brandMap['mings-tea-house'], image_url: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600', alt_text: 'Classic teahouse', sort_order: 1 },
+      { brand_id: brandMap['mings-tea-house'], image_url: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600', alt_text: 'Cozy seating', sort_order: 2 },
+      { brand_id: brandMap['mings-tea-house'], image_url: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600', alt_text: 'Milk tea preparation', sort_order: 3 },
+      { brand_id: brandMap['mings-tea-house'], image_url: 'https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=600', alt_text: 'Nostalgic decor', sort_order: 4 },
+      { brand_id: brandMap['mings-tea-house'], image_url: 'https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=600', alt_text: 'Local favorites', sort_order: 5 },
+      { brand_id: brandMap['mings-tea-house'], image_url: 'https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=600', alt_text: 'Fresh bakes', sort_order: 6 }
     ].map(img => ({ ...img, created_at: new Date(), updated_at: new Date() }));
 
     await queryInterface.bulkInsert('gallery_images', galleryImages);

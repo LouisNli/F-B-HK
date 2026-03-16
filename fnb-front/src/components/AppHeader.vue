@@ -15,13 +15,13 @@
             <router-link to="/" class="header__nav-link" @click="closeMenu">HOME</router-link>
           </li>
           <li class="header__nav-item">
-            <router-link to="/yue-garden" class="header__nav-link" @click="closeMenu">YUE GARDEN</router-link>
+            <router-link to="/jade-pavilion" class="header__nav-link" @click="closeMenu">JADE PAVILION</router-link>
           </li>
           <li class="header__nav-item">
-            <router-link to="/harbour-bistro" class="header__nav-link" @click="closeMenu">HARBOUR BISTRO</router-link>
+            <router-link to="/bay-bistro" class="header__nav-link" @click="closeMenu">BAY BISTRO</router-link>
           </li>
           <li class="header__nav-item">
-            <router-link to="/teahouse-88" class="header__nav-link" @click="closeMenu">TEAHOUSE 88</router-link>
+            <router-link to="/mings-tea-house" class="header__nav-link" @click="closeMenu">MING'S TEA HOUSE</router-link>
           </li>
         </ul>
       </nav>

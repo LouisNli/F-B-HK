@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HK Restaurant Group - Website Proposal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft JhengHei', 'PingFang HK', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        .page {
+            max-width: 210mm;
+            margin: 20px auto;
+            background: white;
+            padding: 40px 50px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            page-break-after: always;
+        }
+        
+        .cover {
+            text-align: center;
+            padding: 100px 50px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .cover h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            letter-spacing: 3px;
+            font-weight: 300;
+        }
+        
+        .cover .subtitle {
+            font-size: 24px;
+            color: #c9a962;
+            margin-bottom: 60px;
+        }
+        
+        .cover .info {
+            font-size: 16px;
+            opacity: 0.8;
+            line-height: 2;
+        }
+        
+        h2 {
+            font-size: 28px;
+            color: #1a1a1a;
+            margin: 40px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #c9a962;
+        }
+        
+        h3 {
+            font-size: 20px;
+            color: #333;
+            margin: 30px 0 15px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        .highlight-box {
+            background: #f9f5eb;
+            border-left: 4px solid #c9a962;
+            padding: 20px 25px;
+            margin: 25px 0;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .feature-card {
+            background: #fafafa;
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .feature-card h4 {
+            color: #c9a962;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .screenshot {
+            width: 100%;
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .screenshot-caption {
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 20px 0;
+        }
+        
+        ul {
+            margin: 15px 0 15px 25px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        .tech-stack {
+            background: #1a1a1a;
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+        
+        .tech-stack h3 {
+            color: #c9a962;
+        }
+        
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .tech-item {
+            text-align: center;
+            padding: 15px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+        }
+        
+        .price-table th {
+            background: #1a1a1a;
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+        
+        .price-table td {
+            padding: 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .price-table tr:nth-child(even) {
+            background: #fafafa;
+        }
+        
+        .check {
+            color: #4caf50;
+            font-weight: bold;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        @media print {
+            .page {
+                margin: 0;
+                box-shadow: none;
+            }
+            body {
+                background: white;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Cover Page -->
+    <div class="page cover">
+        <h1>RESTAURANT GROUP</h1>
+        <div class="subtitle">Brand Website & Content Management System</div>
+        <div class="info">
+            <p>Proposal</p>
+            <p>March 2026</p>
+        </div>
+    </div>
+
+    <!-- Executive Summary -->
+    <div class="page">
+        <h2>Executive Summary</h2>
+        
+        <div class="highlight-box">
+            <strong>Project Goal:</strong> Create a sophisticated digital presence for your restaurant group that showcases multiple distinct dining brands while providing an easy-to-use content management system for ongoing updates.
+        </div>
+
+        <h3>Our Proposed Solution</h3>
+        <ul>
+            <li><strong>Multi-Brand Website</strong> - A unified website showcasing multiple restaurants with consistent branding yet distinct personalities for each establishment.</li>
+            <li><strong>CMS Admin Panel</strong> - Self-service content management system allowing your team to update menus, images, and information without technical knowledge.</li>
+            <li><strong>Mobile Responsive</strong> - Beautiful experience across all devices - desktop, tablet, and mobile phones.</li>
+            <li><strong>Production Ready</strong> - Complete deployment setup with development and production environments.</li>
+        </ul>
+
+        <h3>Key Benefits</h3>
+        <ul>
+            <li><strong>Reduce Update Costs:</strong> No need to hire developers for content changes</li>
+            <li><strong>Consistent Brand Image:</strong> Professional presentation across all three restaurants</li>
+            <li><strong>Future-Proof Architecture:</strong> Modern technology stack that's scalable and maintainable</li>
+            <li><strong>Fast Loading:</strong> Optimized performance for better user experience and SEO</li>
+        </ul>
+    </div>
+
+    <!-- Website Showcase -->
+    <div class="page">
+        <h2>Website Preview - Homepage</h2>
+        <p>The homepage features a stunning full-screen hero section that immediately captures the essence of culinary excellence. The design emphasizes visual impact while maintaining elegant simplicity. (Below are concept design mockups)</p>
+        
+        <img src="proposal_images/01_homepage_full.png" class="screenshot" alt="Homepage">
+        <p class="screenshot-caption">Homepage concept: hero section, philosophy, and brand cards</p>
+
+        <div class="highlight-box">
+            <strong>Design Highlights:</strong>
+            <ul>
+                <li>Full-viewport hero image with overlay navigation</li>
+                <li>Smooth page transition animations</li>
+                <li>Philosophy section conveying brand values</li>
+                <li>Interactive brand cards leading to individual restaurant pages</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Brand Pages -->
+    <div class="page">
+        <h2>Individual Brand Pages</h2>
+        <p>Each restaurant has its own dedicated page with consistent structure but unique content, allowing customers to explore the distinct character of each brand. (Below are concept design mockups)</p>
+
+        <h3>Brand A - Fine Dining Example</h3>
+        <img src="proposal_images/02_yue_garden_brand.png" class="screenshot" alt="Brand A Page">
+        <p class="screenshot-caption">Brand page concept: featuring concept, signature dishes, and gallery</p>
+
+        <h3>Brand B - Fusion Dining Example</h3>
+        <img src="proposal_images/03_harbour_bistro_brand.png" class="screenshot" alt="Brand B Page">
+        <p class="screenshot-caption">Brand page concept: unique brand identity and menu highlights</p>
+
+        <div class="highlight-box">
+            <strong>Brand Page Features:</strong>
+            <ul>
+                <li>Hero section with restaurant-specific imagery</li>
+                <li>Concept/About section with detailed descriptions</li>
+                <li>Signature dishes showcase with photos</li>
+                <li>Location information and contact details</li>
+                <li>Atmosphere gallery for visual storytelling</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- CMS System -->
+    <div class="page">
+        <h2>Content Management System (CMS)</h2>
+        <p>The CMS provides an intuitive interface for managing all website content. No coding knowledge required - your team can update text, upload images, and manage menus through a simple web interface. (Below are concept design mockups)</p>
+
+        <h3>CMS Dashboard</h3>
+        <img src="proposal_images/04_cms_dashboard.png" class="screenshot" alt="CMS Dashboard">
+        <p class="screenshot-caption">Dashboard concept: central hub for managing all website content</p>
+
+        <h3>Brand Content Editor</h3>
+        <img src="proposal_images/05_cms_brand_edit_yue_garden.png" class="screenshot" alt="CMS Brand Editor">
+        <p class="screenshot-caption">Editor concept: easily edit brand information, upload images, and manage content</p>
+
+        <h3>CMS Features</h3>
+        <ul>
+            <li><strong>Homepage Management</strong> - Update hero images, titles, philosophy text, and photo grid</li>
+            <li><strong>Brand Content</strong> - Edit restaurant descriptions, contact info, and concept text</li>
+            <li><strong>Menu Management</strong> - Add, edit, or remove dishes with photos and descriptions</li>
+            <li><strong>Gallery Management</strong> - Upload and organize atmosphere photos for each restaurant</li>
+        </ul>
+    </div>
+
+    <!-- Project Scope -->
+    <div class="page">
+        <h2>Project Scope & Deliverables</h2>
+
+        <h3>Proposed Features</h3>
+        <table class="price-table">
+            <tr>
+                <th>Feature</th>
+                <th>Status</th>
+            </tr>
+            <tr>
+                <td>Multi-brand website (multiple restaurants)</td>
+                <td class="check">✓ Available</td>
+            </tr>
+            <tr>
+                <td>Homepage with hero, philosophy, brand cards</td>
+                <td class="check">✓ Available</td>
+            </tr>
+            <tr>
+                <td>Individual brand pages with dishes & gallery</td>
+                <td class="check">✓ Available</td>
+            </tr>
+            <tr>
+                <td>Content Management System (CMS)</td>
+                <td class="check">✓ Available</td>
+            </tr>
+            <tr>
+                <td>Image upload functionality</td>
+                <td class="check">✓ Available</td>
+            </tr>
+            <tr>
+                <td>Mobile responsive design</td>
+                <td class="check">✓ Available</td>
+            </tr>
+            <tr>
+                <td>Page transition animations</td>
+                <td class="check">✓ Available</td>
+            </tr>
+            <tr>
+                <td>Basic SEO optimization</td>
+                <td class="check">✓ Available</td>
+            </tr>
+            <tr>
+                <td>SSL security certificate</td>
+                <td class="check">✓ Available</td>
+            </tr>
+        </table>
+
+        <h3>Future Enhancement Options</h3>
+        <ul>
+            <li><strong>Online Reservation System:</strong> Integrate booking functionality</li>
+            <li><strong>Multi-language Support:</strong> Add Traditional Chinese / English toggle</li>
+            <li><strong>SEO Optimization:</strong> Meta tags, sitemap, structured data</li>
+            <li><strong>Cloud Image Storage:</strong> Migrate to AWS S3 or similar</li>
+            <li><strong>Analytics Integration:</strong> Google Analytics for visitor insights</li>
+            <li><strong>Social Media Integration:</strong> Instagram feed, sharing buttons</li>
+        </ul>
+    </div>
+
+    <!-- Project Workflow -->
+    <div class="page">
+        <h2>Project Workflow</h2>
+        
+        <div class="highlight-box">
+            <strong>If selected, we propose the following implementation workflow.</strong> Our team is ready to deliver a complete solution tailored to your needs.
+        </div>
+
+        <h3>Phase 1: Requirements & Design</h3>
+        <p>Gather detailed requirements, brand guidelines, and content. Finalize design specifications and obtain approval.</p>
+
+        <h3>Phase 2: Development & Integration</h3>
+        <p>Develop the website and CMS system. Integrate with your provided content, images, and branding materials.</p>
+
+        <h3>Phase 3: Content Import</h3>
+        <p>Assist with importing restaurant information, images, and menu content into the system.</p>
+
+        <h3>Phase 4: Domain Setup</h3>
+        <p>Hosting and server infrastructure will be provided by us. You only need to provide your domain name.</p>
+
+        <h3>Phase 5: Deployment & Launch</h3>
+        <p>Deploy to production environment and go live. The system is designed for easy ongoing maintenance.</p>
+
+        <div class="footer">
+            <p><strong>Restaurant Group Website Proposal</strong></p>
+            <p>Ready to elevate your digital presence</p>
+            <p style="margin-top: 30px; color: #999;">Proposal Date: March 2026</p>
+        </div>
+    </div>
+</body>
+</html>
