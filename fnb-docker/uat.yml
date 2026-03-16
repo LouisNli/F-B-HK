@@ -1,0 +1,79 @@
+services:
+  # PostgreSQL Database
+  database:
+    image: postgres:16-alpine
+    container_name: fnb-db-uat
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${DB_USER:-postgres}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-postgres}
+      POSTGRES_DB: ${DB_NAME:-fnb_db}
+    volumes:
+      - postgres_data_uat:/var/lib/postgresql/data
+    networks:
+      - fnb-network-uat
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-postgres} -d ${DB_NAME:-fnb_db}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 1G
+
+  # Backend API (Production mode)
+  backend:
+    build:
+      context: ../fnb-backend
+      dockerfile: Dockerfile
+      target: production
+    container_name: fnb-backend-uat
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      DB_HOST: database
+      DB_PORT: 5432
+      DB_USER: ${DB_USER:-postgres}
+      DB_PASSWORD: ${DB_PASSWORD:-postgres}
+      DB_NAME: ${DB_NAME:-fnb_db}
+      CORS_ORIGIN: ${CORS_ORIGIN:-*}
+    networks:
+      - fnb-network-uat
+    depends_on:
+      database:
+        condition: service_healthy
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+
+  # Frontend (Production mode with Nginx)
+  frontend:
+    build:
+      context: ../fnb-front
+      dockerfile: Dockerfile
+      target: production
+    container_name: fnb-frontend-uat
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    networks:
+      - fnb-network-uat
+    depends_on:
+      - backend
+    deploy:
+      resources:
+        limits:
+          cpus: '0.25'
+          memory: 256M
+
+networks:
+  fnb-network-uat:
+    driver: bridge
+
+volumes:
+  postgres_data_uat:
