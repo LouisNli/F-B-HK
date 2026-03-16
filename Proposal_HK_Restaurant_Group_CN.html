@@ -105,18 +105,22 @@
         
         .screenshot {
             width: 100%;
-            margin: 20px 0;
+            max-height: 520px;
+            object-fit: contain;
+            object-position: top;
+            margin: 15px 0;
             border: 1px solid #ddd;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            page-break-inside: avoid;
         }
         
         .screenshot-caption {
             text-align: center;
             color: #666;
             font-size: 14px;
-            margin-top: 10px;
-            margin-bottom: 30px;
+            margin-top: 8px;
+            margin-bottom: 25px;
         }
         
         .two-col {
@@ -213,9 +217,19 @@
             .page {
                 margin: 0;
                 box-shadow: none;
+                page-break-after: always;
             }
             body {
                 background: white;
+            }
+            .screenshot {
+                max-height: 480px;
+            }
+            h2, h3 {
+                page-break-after: avoid;
+            }
+            .screenshot, .highlight-box, .feature-card {
+                page-break-inside: avoid;
             }
         }
     </style>
