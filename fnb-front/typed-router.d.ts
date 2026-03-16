@@ -19,9 +19,9 @@ declare module 'vue-router/auto-routes' {
    */
   export interface RouteNamedMap {
     '/': RouteRecordInfo<'/', '/', Record<never, never>, Record<never, never>>,
-    '/harbour-bistro': RouteRecordInfo<'/harbour-bistro', '/harbour-bistro', Record<never, never>, Record<never, never>>,
-    '/teahouse-88': RouteRecordInfo<'/teahouse-88', '/teahouse-88', Record<never, never>, Record<never, never>>,
-    '/yue-garden': RouteRecordInfo<'/yue-garden', '/yue-garden', Record<never, never>, Record<never, never>>,
+    '/bay-bistro': RouteRecordInfo<'/bay-bistro', '/bay-bistro', Record<never, never>, Record<never, never>>,
+    '/jade-pavilion': RouteRecordInfo<'/jade-pavilion', '/jade-pavilion', Record<never, never>, Record<never, never>>,
+    '/mings-tea-house': RouteRecordInfo<'/mings-tea-house', '/mings-tea-house', Record<never, never>, Record<never, never>>,
   }
 
   /**
@@ -39,16 +39,16 @@ declare module 'vue-router/auto-routes' {
       routes: '/'
       views: never
     }
-    'src/pages/harbour-bistro.vue': {
-      routes: '/harbour-bistro'
+    'src/pages/bay-bistro.vue': {
+      routes: '/bay-bistro'
       views: never
     }
-    'src/pages/teahouse-88.vue': {
-      routes: '/teahouse-88'
+    'src/pages/jade-pavilion.vue': {
+      routes: '/jade-pavilion'
       views: never
     }
-    'src/pages/yue-garden.vue': {
-      routes: '/yue-garden'
+    'src/pages/mings-tea-house.vue': {
+      routes: '/mings-tea-house'
       views: never
     }
   }
