@@ -1,5 +1,6 @@
 import App from "./App.vue";
 import { initApp, preloadApp, registerAppPlugins } from "./plugins";
+import "./styles/global.css";
 // import "./style.css"; (replaced by index.css in plugins)
 
 // Handle Top-level await issue

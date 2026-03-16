@@ -41,5 +41,5 @@ router.afterEach((to, from) => {
 export default router;
 
 export function updateMeta() {
-  document.title = "Testing project base";
+  document.title = "HK Restaurant Group";
 }

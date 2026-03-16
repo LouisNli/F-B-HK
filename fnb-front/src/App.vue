@@ -1,15 +1,26 @@
 <template>
-  <div class="container">
-    <button @click="() => $router.push('/')">Index</button>
-    <button @click="() => $router.push('/Homepage')">Homepage</button>
+  <div id="app">
+    <AppHeader />
+    <main>
+      <RouterView />
+    </main>
+    <AppFooter />
   </div>
-  <RouterView />
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import AppHeader from '@/components/AppHeader.vue'
+import AppFooter from '@/components/AppFooter.vue'
+</script>
 
-<style scoped>
-.container {
-  margin-bottom: 10rem;
+<style>
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
 }
 </style>
