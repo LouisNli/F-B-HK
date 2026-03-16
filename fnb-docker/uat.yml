@@ -31,6 +31,7 @@ services:
       target: production
     container_name: fnb-backend-uat
     restart: unless-stopped
+    command: sh -c "npm run db:migrate && npm run db:seed; npm run start"
     environment:
       NODE_ENV: production
       PORT: 3000
@@ -40,6 +41,8 @@ services:
       DB_PASSWORD: ${DB_PASSWORD:-postgres}
       DB_NAME: ${DB_NAME:-fnb_db}
       CORS_ORIGIN: ${CORS_ORIGIN:-*}
+    volumes:
+      - backend_uploads_uat:/app/uploads
     networks:
       - fnb-network-uat
     depends_on:
@@ -71,9 +74,30 @@ services:
           cpus: '0.25'
           memory: 256M
 
+  # CMS Admin (Production mode with Nginx)
+  cms:
+    build:
+      context: ../fnb-cms
+      dockerfile: Dockerfile
+      target: production
+    container_name: fnb-cms-uat
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    networks:
+      - fnb-network-uat
+    depends_on:
+      - backend
+    deploy:
+      resources:
+        limits:
+          cpus: '0.25'
+          memory: 256M
+
 networks:
   fnb-network-uat:
     driver: bridge
 
 volumes:
   postgres_data_uat:
+  backend_uploads_uat:

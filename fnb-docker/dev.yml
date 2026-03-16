@@ -28,7 +28,7 @@ services:
       target: builder
     container_name: fnb-backend-dev
     restart: unless-stopped
-    command: npm run dev
+    command: sh -c "npm run db:migrate && npm run db:seed; npm run dev"
     environment:
       NODE_ENV: development
       PORT: 3000
@@ -41,6 +41,7 @@ services:
     volumes:
       - ../fnb-backend/src:/app/src:ro
       - ../fnb-backend/package.json:/app/package.json:ro
+      - backend_uploads:/app/uploads
     ports:
       - "3000:3000"
     networks:
@@ -72,9 +73,33 @@ services:
     depends_on:
       - backend
 
+  # CMS Admin (Development mode)
+  cms:
+    build:
+      context: ../fnb-cms
+      dockerfile: Dockerfile
+      target: development
+    container_name: fnb-cms-dev
+    restart: unless-stopped
+    environment:
+      NODE_ENV: development
+      VITE_API_URL: http://localhost:3000
+    volumes:
+      - ../fnb-cms/src:/app/src
+      - ../fnb-cms/public:/app/public
+      - ../fnb-cms/index.html:/app/index.html
+      - ../fnb-cms/vite.config.ts:/app/vite.config.ts
+    ports:
+      - "5174:5174"
+    networks:
+      - fnb-network-dev
+    depends_on:
+      - backend
+
 networks:
   fnb-network-dev:
     driver: bridge
 
 volumes:
   postgres_data_dev:
+  backend_uploads:
