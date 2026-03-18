@@ -3,7 +3,6 @@ services:
   database:
     image: postgres:16-alpine
     container_name: fnb-db-dev
-    restart: unless-stopped
     environment:
       POSTGRES_USER: ${DB_USER:-postgres}
       POSTGRES_PASSWORD: ${DB_PASSWORD:-postgres}
@@ -27,7 +26,6 @@ services:
       dockerfile: Dockerfile
       target: builder
     container_name: fnb-backend-dev
-    restart: unless-stopped
     command: sh -c "npm run db:migrate && npm run db:seed; npm run dev"
     environment:
       NODE_ENV: development
@@ -57,7 +55,6 @@ services:
       dockerfile: Dockerfile
       target: development
     container_name: fnb-frontend-dev
-    restart: unless-stopped
     environment:
       NODE_ENV: development
       VITE_API_URL: http://localhost:3000
@@ -80,7 +77,6 @@ services:
       dockerfile: Dockerfile
       target: development
     container_name: fnb-cms-dev
-    restart: unless-stopped
     environment:
       NODE_ENV: development
       VITE_API_URL: http://localhost:3000
